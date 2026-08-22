@@ -3,14 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sheaf — a canvas for your PDFs</title>
-<meta name="description" content="Sheaf lays every PDF you own out as a strip of real pages on one plane you pan and zoom, and keeps its own copy so deleting the originals costs you nothing. A one-time purchase on the Mac App Store, for macOS." />
+<title>Sheaf — Support</title>
+<meta name="description" content="Support for Sheaf, a document canvas for macOS. How to get help, report a problem, and what the app does with your data." />
 <link rel="icon" href="icon.png" />
-<meta property="og:title" content="Sheaf — a canvas for your PDFs" />
-<meta property="og:description" content="One canvas for every PDF you own. On the Mac App Store, for macOS." />
-<meta property="og:image" content="https://victorzsh.github.io/sheaf/shot-header.jpg" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -204,160 +199,74 @@
     .nav-right a.plain { display: none; }
   }
 </style>
+<style>
+  /* Support is prose, not a pitch: one readable column. */
+  .doc { max-width: 68ch; margin: 0 auto; padding: 56px 0 72px; }
+  .doc h1 { font-size: var(--text-4xl); margin: 0 0 8px; letter-spacing: -0.02em; }
+  .doc .lede { color: var(--muted); font-size: var(--text-lg); margin: 0 0 40px; }
+  .doc h2 { font-size: var(--text-xl); margin: 40px 0 10px; letter-spacing: -0.01em; }
+  .doc p { color: var(--muted); font-size: var(--text-md); margin: 0 0 12px; }
+  .doc a { color: var(--accent); }
+  .doc dt { font-weight: 600; color: var(--ink); font-size: var(--text-md); margin-top: 20px; }
+  .doc dd { margin: 6px 0 0; color: var(--muted); font-size: var(--text-md); }
+  .doc .updated { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--hairline);
+                  color: var(--faint); font-size: var(--text-sm); }
+</style>
 </head>
 <body>
 
 <nav>
   <div class="wrap">
-    <a class="brand" href="#top"><img src="icon.png" alt="" />Sheaf</a>
+    <a class="brand" href="index.html"><img src="icon.png" alt="" />Sheaf</a>
     <div class="nav-right">
-      <a class="plain" href="#views">Views</a>
-      <a class="plain" href="#what">What it does</a>
-      <a class="plain" href="https://github.com/victorzsh/sheaf-updates/releases/tag/updates">Releases</a>
+      <a class="plain" href="index.html#views">Views</a>
+      <a class="plain" href="index.html#what">What it does</a>
       <a class="plain" href="support.html">Support</a>
     </div>
   </div>
 </nav>
 
-<header id="top">
-  <div class="wrap">
-    <h1>A canvas for the pile of PDFs you actually have.</h1>
-    <p class="lede">
-      Sheaf lays every document out as a strip of real, readable pages on one
-      plane you pan and zoom. It copies them into a library of its own, so
-      closing the app — or deleting the originals — costs you nothing.
-    </p>
-    <div class="cta">
-      <span class="cta-note"><b>Coming to the Mac App Store</b> · $4.99 · universal · macOS 14+</span>
-    </div>
+<div class="wrap">
+  <div class="doc">
+    <h1>Support</h1>
+    <p class="lede">Sheaf is made by one person. Questions and bug reports reach me directly, and I answer them.</p>
 
-    <div class="shot hero-shot">
-      <img src="shot-header.jpg" width="2000" height="1233"
-           alt="The Sheaf window: a 660-page dictionary and two sample PDFs laid out as rows of real pages on one canvas." />
-    </div>
-  </div>
-</header>
+    <h2>Getting help</h2>
+    <p>The fastest route is to <a href="https://github.com/victorzsh/sheaf/issues">open an issue on GitHub</a>. Describe what you did, what happened, and what you expected instead. If the app misbehaved with a particular document, say what kind of document it was — that is usually the detail that solves it.</p>
 
-<section id="views">
-  <div class="wrap">
-    <h2>Three views, one library</h2>
-    <p class="sub">
-      The canvas is the point of the app and it is what opens. But a canvas is
-      the wrong tool for renaming eight files in a row, so the same library is
-      also a list and a grid. They are views, not copies: fold a folder in one
-      and it is folded in all three.
-    </p>
+    <h2>Common questions</h2>
+    <dl>
+      <dt>Where does my library live?</dt>
+      <dd>In Sheaf's own iCloud container, so every Mac signed into the same Apple Account opens the same library. If iCloud Drive is switched off, Sheaf keeps the library locally instead and tells you so.</dd>
 
-    <div class="views">
-      <div class="view">
-        <figure>
-          <div class="frame">
-            <img src="shot-canvas.jpg" width="1200" height="644" loading="lazy"
-                 alt="Canvas view: each document laid out as a row of full page previews." />
-          </div>
-          <figcaption>
-            <div class="name">Canvas <span class="key">⌘1</span></div>
-            <div class="desc">Every document as a strip of pages you can actually read.</div>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="view">
-        <figure>
-          <div class="frame">
-            <img src="shot-list.jpg" width="1200" height="597" loading="lazy"
-                 alt="List view: one numbered row per document with a small cover thumbnail." />
-          </div>
-          <figcaption>
-            <div class="name">List <span class="key">⌘2</span></div>
-            <div class="desc">One line each, for renaming and reordering in bulk.</div>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="view">
-        <figure>
-          <div class="frame">
-            <img src="shot-grid.jpg" width="1200" height="677" loading="lazy"
-                 alt="Grid view: documents shown as large cover thumbnails with page counts." />
-          </div>
-          <figcaption>
-            <div class="name">Grid <span class="key">⌘3</span></div>
-            <div class="desc">Covers first, when the first page is the only label you remember.</div>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
+      <dt>What happens to the files I import?</dt>
+      <dd>Sheaf copies them into its library. Deleting the originals afterwards costs you nothing, and the app never modifies the files you imported.</dd>
 
-<section id="what">
-  <div class="wrap">
-    <h2>What it actually does</h2>
-    <p class="sub">Five things, stated plainly.</p>
+      <dt>Which files can I add?</dt>
+      <dd>PDFs and images — PNG, JPEG, HEIC and TIFF — either one at a time or a whole folder at once.</dd>
 
-    <dl class="facts">
-      <div class="fact">
-        <dt>It keeps its own copy</dt>
-        <dd>
-          Importing a PDF copies it into a <code>.sheaf</code> package, content-addressed,
-          so importing the same file twice costs nothing and moving the original to the
-          bin costs nothing either. There is one library, opened at launch and saved on
-          its own. No save dialog, ever.
-        </dd>
-      </div>
-      <div class="fact">
-        <dt>It syncs, and it merges</dt>
-        <dd>
-          The library lives in Sheaf's own iCloud container, so every Mac on your Apple
-          Account opens the same one. Two Macs edited offline <em>merge</em> rather than
-          overwrite: both sides' imports survive, the newer edit wins when they collide,
-          and a deletion beats any copy older than it.
-        </dd>
-      </div>
-      <div class="fact">
-        <dt>660 pages is one row</dt>
-        <dd>
-          Only the rows near the viewport are ever built, so the canvas opens at the same
-          speed whether the library holds ten documents or a thousand. The dictionary in
-          the screenshot above is a single 660-page document.
-        </dd>
-      </div>
-      <div class="fact">
-        <dt>Search reaches every page</dt>
-        <dd>
-          <code>⌘F</code> searches the whole library, not the document you happen to have
-          open, and scans are read with Vision so a photographed page is findable too.
-        </dd>
-      </div>
-      <div class="fact">
-        <dt>Exports are just PDFs</dt>
-        <dd>
-          Export the library as one PDF, or as a zip holding one PDF per document.
-          Nothing proprietary, nothing stapled on: files that any reader opens normally.
-        </dd>
-      </div>
+      <dt>Does Sheaf need an account?</dt>
+      <dd>No. There is no sign-up, no login, and no server of mine involved at any point.</dd>
+
+      <dt>What does it cost?</dt>
+      <dd>$4.99 once, on the Mac App Store. There is no subscription and nothing further to buy inside the app.</dd>
+
+      <dt>What does it require?</dt>
+      <dd>macOS 14 Sonoma or later, on Apple Silicon or Intel.</dd>
     </dl>
-  </div>
-</section>
 
-<section id="download">
-  <div class="wrap">
-    <div class="download">
-      <div>
-        <h2>Get Sheaf</h2>
-        <p>A one-time purchase on the Mac App Store. No subscription, no account to create.</p>
-        <div class="meta">macOS 14 Sonoma or later · Apple Silicon and Intel · $4.99</div>
-      </div>
-      <span class="btn btn-light btn-lg" aria-disabled="true">Coming soon</span>
-    </div>
+    <h2>Privacy</h2>
+    <p>Sheaf collects nothing. The App Store version makes no network requests at all: there is no analytics, no crash reporting, and no telemetry of any kind. Your documents stay on your Mac and in your own iCloud account, which I have no access to.</p>
+
+    <div class="updated">Last updated 22 August 2026.</div>
   </div>
-</section>
+</div>
 
 <footer>
   <div class="wrap">
     <span>Sheaf is MIT licensed.</span>
     <div class="links">
-      <a href="support.html">Support</a>
-      <a href="https://github.com/victorzsh/sheaf-updates/releases/tag/updates">Releases</a>
+      <a href="index.html">Home</a>
       <a href="https://victorzsh.github.io/sheaf-updates/appcast.xml">Update feed</a>
     </div>
   </div>
